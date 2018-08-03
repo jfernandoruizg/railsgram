@@ -1,0 +1,25 @@
+<%if user_signed_in?%>
+<div class="row">
+  <div class="col-4">
+
+  </div>
+<div class="col-8">
+<div class="">
+  <h1><%= current_user.name%></h1>
+  <ul class="nav">
+    <li class="derecha"><p> <strong> <%=@var_images.count%></strong> Publicaciones</p></li>
+    <li class="derecha"><p> <strong> 250 </strong> Seguidos</p></li>
+    <li class="derecha"><p> <strong> 200</strong> Seguidores</p></li>
+
+  </ul>
+  <%=link_to 'new',new_image_path%>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <%=render @var_images%>
+</div>
+<%else%>
+<h1>RailsGram</h1>
+<%end%>

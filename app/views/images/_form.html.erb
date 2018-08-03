@@ -1,0 +1,16 @@
+
+
+ <div class="form_group">
+   <%=form_for @var_image, builder: CustomFormBuilder do |f|%>
+<%=f.form_error%>
+
+  <%=f.label :description %>
+  <%=f.text_field :description, class: 'form-control'%>
+<%=f.field_error :description%>
+  <%=f.label :picture%><br>
+  <%=f.file_field :picture%>
+  <br><br>
+
+  <%=f.submit 'Enviar', :class =>'btn btn-primary' %>
+  <%end%>
+</div>
